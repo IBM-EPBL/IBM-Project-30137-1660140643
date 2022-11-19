@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="../static/adminreg.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+<video src="../static/video/background.mp4" autoplay loop playsinline muted></video>
+<form action="/" method="POST">
+
+    <div class="user">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Enter your username" name="username" id="username">
+        <small></small>
+    </div>
+    <div class="user">
+        <i class="fas fa-user"></i>
+        <input type="email" placeholder="Enter your mailid" name="email" id="email">
+        <small></small>
+    </div>
+    <div class="password">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" name="password" id="password">
+        <br>
+        <small></small>
+    </div>
+    <div class="password">
+        <i class="fas fa-lock"></i>
+        <input type="text" placeholder="Confirm password" name="confirm_password" id="confirm_password">
+        <br>
+        <small></small>
+    </div>
+    <div class="button">
+        <button class="button" type="submit"><b>REGISTER</b></button>
+        <button><a href="/login">LOGIN</a></button>
+    </div>
+    <h4 class="text-danger" id="pass-warning" style="color: white"></h4>
+</form>
+<script>document.getElementById("pass-warning").innerHTML = '{{data}}';</script>
+<script src="../static/js/adminreg.js"></script>
+</body>
+</html>
